@@ -1,0 +1,30 @@
+{
+  "id": "INT-008",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Hotel",
+    "segment": "Tapasztalt Anima játékos, aki szereti a dobás alapú karakteralkotást, de fejben dolgozik és a praktikus funkciókat értékeli leginkább."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó a karakteralkotás során leginkább a tulajdonságok dobását élvezi, mert ez véletlenszerű, de karakterformáló folyamat.",
+    "A karakteralkotást általában fejben végzi, de fontos számára a csapaton belüli kompatibilitás, amit időigényesnek talál figyelembe venni.",
+    "A Ki szabályrendszert tartja a legnehezebben kezelhetőnek, és gyakran játék közben kell újraszámolnia az értékeket.",
+    "A digitális karakteralkotóban kiemelten fontosnak tartaná a felszerelés- és varázslatlista kezelését, valamint ezek futtatását játék közben.",
+    "Érdekesnek tartaná az avatár generálási lehetőséget és a Kalandmester számára biztosított hozzáférést a karakterekhez."
+  ],
+  "pain_points": [
+    "A Ki rendszer értelmezése nehéz, különösen a játék közbeni változások követése.",
+    "A csapaton belüli karakter-kompatibilitás megtervezése sok időt vesz igénybe.",
+    "A jelenlegi eszközök nem kezelik megfelelően a felszerelés- és varázslatlistákat.",
+    "A meglévő Anima karakteralkotó segédeszközöket használhatatlannak ítélte ('mindegyik rossz volt')."
+  ],
+  "quotes": [
+    "\"Tulajdonság dobás – ez az, amit a legjobban szeretek a karakteralkotásban.\"",
+    "\"Fejben dolgozom, de figyelembe kell venni a party kompatibilitást, ami sok idő.\"",
+    "\"Igen, mindegyik Anima karakteralkotó rossz volt, amit próbáltam.\"",
+    "\"Felszerelés lista / varázslat lista kezelése és futtatása – ez lenne a legfontosabb funkció.\"",
+    "\"Avatár generálás és megosztott party / KM hozzáférés jól jönne, ha nincs időm rajzolni.\""
+  ]
+}

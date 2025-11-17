@@ -1,0 +1,29 @@
+{
+  "id": "INT-002",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Bravo",
+    "segment": "Tapasztalt szerepjátékos, aki több rendszert ismer (M.A.G.U.S., D&D), de főként Anima: Beyond Fantasy-ban játszik."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó számára a karakteralkotás legélvezetesebb része a háttértörténet kidolgozása és a karakter személyiségének megalkotása.",
+    "Előszeretettel használ online appokat vagy Excel-t, ha elérhetők, de szükség esetén papíron is képes karaktert alkotni.",
+    "Fontos számára az exportálható, nyomtatható karakterlap és a rendszer, amely automatikusan figyelmeztet a szabályellenes kombinációkra.",
+    "Érdekesnek tartaná, ha a mobil verzió lehetővé tenné a karakterlapok és a KM közötti adatkapcsolatot, például automatikus dobások megosztásával."
+  ],
+  "pain_points": [
+    "A varázslatok kiválasztása időigényes és nehezen átlátható.",
+    "A képzettségek rendszerének értelmezése bonyolult és lassítja az alkotási folyamatot.",
+    "Korábban előfordult, hogy a karakter túl gyenge lett, és játék közben derült ki, hogy rosszul lett összerakva.",
+    "Hiányzik az egységes online eszköz az Anima rendszerhez."
+  ],
+  "quotes": [
+    "\"Háttértörténet írása – ez a kedvenc részem, mindig ezzel kezdem a karakteralkotást.\"",
+    "\"Ha van online app, vagy excel, abban dolgozom, különben papíron.\"",
+    "\"Varázslatok kiválasztása a legidőigényesebb rész.\"",
+    "\"Kipróbálnám a mobilos verziót, főleg ha a KM is látná a karakterdobásokat automatikusan.\"",
+    "\"A digitális karakterlap gyorsítaná a harcot, de a személyes szerepjáték varázsa fontos, nem szabad, hogy teljesen gépesített legyen.\""
+  ]
+}

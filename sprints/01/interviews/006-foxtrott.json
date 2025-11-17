@@ -1,0 +1,30 @@
+{
+  "id": "INT-006",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Foxtrot",
+    "segment": "Tapasztalt szerepjátékos, aki a Foundry VTT-t is használja online meséknél, de papíron jobban szeret karaktert alkotni."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó élvezi a karakteralkotás bonyolultságát és a realizmushoz való közelítést, ami számára a játékélmény része.",
+    "Papíron szeret karaktert alkotni, de ha online kampányban játszik, akkor a Foundry VTT-t használja, tehát nem idegen számára a digitális eszközhasználat.",
+    "A legidőigényesebb részek közé tartozik a felszerelésválasztás és a kezdőpénz elköltése.",
+    "Fontosnak tartja, hogy a digitális karakteralkotó ne legyen teljesen rendszerfüggetlen, hanem kapcsolódjon a játék világához és tartalmazzon háttérleírásokat.",
+    "Nem feltétlen igényli a nyomtatható karakterlapot, inkább az integrált, világismereti funkciókat értékeli."
+  ],
+  "pain_points": [
+    "A felszerelésválasztás és a pénzkezelés lassítja a karakteralkotási folyamatot.",
+    "A mágia szabályainak értelmezése időigényes és hibalehetőségeket hordoz.",
+    "Számítási hibák gyakran előfordulnak, amelyeket a tapasztaltabb játékosok vagy a KM javítanak.",
+    "Hiányolja az olyan karakteralkotó eszközt, amely a játék világának elemeit és leírásait is tartalmazza."
+  ],
+  "quotes": [
+    "\"A bonyolultság és a realizmushoz való közelítés az, amit szeretek a karakteralkotásban.\"",
+    "\"Papíron, de ha online mese, akkor Foundry – attól függ, milyen a kampány.\"",
+    "\"A felszerelésválasztás és a kezdőpénz elköltése mindig a legtöbb időt veszi el.\"",
+    "\"Ne legyen rendszer- és világfüggetlen, legyen benne leírás a világ dolgairól.\"",
+    "\"Általában a KM vagy a tapasztaltabb játékosok segítenek kijavítani a hibákat.\""
+  ]
+}

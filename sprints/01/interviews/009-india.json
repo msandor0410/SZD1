@@ -1,0 +1,30 @@
+{
+  "id": "INT-009",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "India",
+    "segment": "Tapasztalt, technikai beállítottságú játékos, aki saját Excel-es karakteralkotót is készített, és a funkcionalitást tartja elsődlegesnek."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó számára a karakteralkotás legélvezetesebb része a koncepció kidolgozása, és nem szereti, ha a rendszer korlátozza a kreativitást.",
+    "Excelben készíti a karaktereit, mivel így automatizálni tudja a számításokat, és elkerüli a manuális hibákat.",
+    "Az online karakteralkotóban a legfontosabbnak az automatikus számolást és adatkitöltést tartaná, hogy elkerülhető legyen a felesleges ismétlés.",
+    "Digitális eszközöket részesít előnyben, mert így könnyebben naprakész maradhat a játék során.",
+    "Fontosnak tartja az exportálható karakterlapot, bár nem elsődleges funkciónak — inkább „fun” extra lehetőségként tekint rá."
+  ],
+  "pain_points": [
+    "A természetfeletti képességekhez tartozó példák átolvasása időigényes.",
+    "A manuális számítások és adatmásolások felesleges időt rabolnak.",
+    "A jelenlegi eszközök túlságosan statikusak, nem segítenek a valós idejű információfrissítésben.",
+    "A korábbi karakteralkotó segédeszközök (pl. Excel) limitált funkcionalitásúak, nincsenek online integrációs lehetőségek."
+  ],
+  "quotes": [
+    "\"A koncepció kialakítását szeretem – nem szeretem, ha a rendszer behatárolja a fantáziát.\"",
+    "\"Excelben dolgozom, mert ott legalább automatikusan számol.\"",
+    "\"Az automatikus számolás és információ kitöltés a legfontosabb – a copy paste felesleges egy karakteralkotásnál.\"",
+    "\"A fizikai karakterlap fun, de nem elsődleges – digitálisan praktikusabb.\"",
+    "\"Csináltam is egy basic Excel karakteralkotót az első karakteremhez.\""
+  ]
+}

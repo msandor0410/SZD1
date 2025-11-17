@@ -1,0 +1,28 @@
+{
+  "id": "INT-001",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Alfa",
+    "segment": "Tapasztalt Anima játékos, aki főként papíron készíti a karaktereit."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó elsősorban a háttértörténet megalkotását és a karakter finomhangolását élvezi a karakteralkotás során.",
+    "A karakteralkotást többnyire papíron végzi, de nyitott lenne digitális megoldásokra, különösen, ha azok gyorsabbá és átláthatóbbá tennék a folyamatot.",
+    "Fontos számára, hogy a kész karaktereket sablonként vagy menthető formában újra fel tudja használni.",
+    "Online karakterlap-export és mobilos verzió használata számára természetes igény lenne."
+  ],
+  "pain_points": [
+    "A Ki technikák megalkotása és optimalizálása sok időt igényel.",
+    "A mágia, pszí és ki rendszerek értelmezése különösen bonyolult és időigényes.",
+    "Többször hibázott a számolásokban, például Ki pontok elosztásánál, ami hibás értékeket eredményezett.",
+    "Jelenleg nincs ismert digitális eszköze az Anima rendszerhez, amit használna."
+  ],
+  "quotes": [
+    "\"Háttértörténet megalkotása, karaktermenedzsment — ezeket imádom, nem adnám ki a kezemből.\"",
+    "\"Ki technika alkotásnál hibáztam, utólagos összeadásnál nem jöttek ki az értékek.\"",
+    "\"Természetesen fontos lenne, hogy a program tudjon karakterlapot exportálni nyomtatható formában.\"",
+    "\"Mobilon már használnám játék közben.\""
+  ]
+}

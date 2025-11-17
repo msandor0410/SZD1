@@ -1,0 +1,30 @@
+{
+  "id": "INT-010",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Juliet",
+    "segment": "Haladó Anima játékos és mesélő, aki mélyen ismeri a rendszer szabályait és több segédeszközt is kipróbált."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó számára a karakteralkotás legélvezetesebb része a min-maxolás és a koncepció optimalizálása a rendszer adta lehetőségeken belül.",
+    "Excelben alkot karaktert, mivel a jelenlegi segédeszközök nem elég részletesek, és szeretné látni, hogyan számolódnak az értékek.",
+    "A karakteralkotást lassítja, hogy a szabályok és opciók több könyvben szétszórtan találhatók, így gyakran kell lapozgatni és összeollózni az információt.",
+    "Fontos számára, hogy a digitális karakteralkotó átlátható legyen: mutassa, hogyan számol, és tartalmazzon egy 'history' funkciót, amely követi a fejlődési pontok elköltését.",
+    "Inspirációt merít a Pathbuilder 2e alkalmazásból, ahol előre megtervezhető a karakter fejlődése, de csak az aktuális szintig érvényesülnek a módosítók."
+  ],
+  "pain_points": [
+    "A jelenlegi könyvek szerkesztése hektikus, a szabályok széttagoltak és nehezen kereshetők.",
+    "A mágikus és Ki technikák értelmezése továbbra is a legidőigényesebb része a folyamatnak.",
+    "A korábbi segédeszközök nem kínálnak visszakövethetőséget a pontelosztásra.",
+    "Hiányzik az automatizált, de átlátható számításkezelés, ami tanulási és hibakerülési célt is szolgálna."
+  ],
+  "quotes": [
+    "\"Magát az alkotást élvezem, min-maxolni a karaktert, megtalálni a megfelelő kombinációkat – ezt nem lehet kivenni a kézből.\"",
+    "\"Megtalálni a több könyvben a hasznos dolgokat időigényes, az alapkönyv szerkesztése sem segít.\"",
+    "\"Az excel képletek mutatják, ha valami nem klappol – ezért használom őket.\"",
+    "\"Szeretném látni, hogy mi hogyan számolódik ki, és egy history-t, ami követi, mire lett elköltve a DP.\"",
+    "\"A Pathbuilder 2e-hez hasonló megoldás jó lenne, ahol előre lehet tervezni, de csak a szintnek megfelelően alkalmazódik.\""
+  ]
+}

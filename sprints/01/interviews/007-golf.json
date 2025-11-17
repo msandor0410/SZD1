@@ -1,0 +1,29 @@
+{
+  "id": "INT-007",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Golf",
+    "segment": "Tapasztalt játékos, aki rendszeresen ellenőrzi a karakterei pontelosztását, és inkább a játék közbeni menedzsmentre fókuszál."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó számára a karakteralkotás élvezetes, ha már van előzetes koncepció, és onnantól a részletek kidolgozását tartja izgalmasnak.",
+    "A karakteralkotást jellemzően papíron és fejben, olvasgatva végzi, precízen ellenőrizve az értékeket.",
+    "Kiemelten fontosnak tartja a támadó és védekező értékekhez kapcsolódó bónuszok és negatívumok egyszerű kezelését egy digitális eszközben.",
+    "A programot elsősorban játék közbeni karaktermenedzsmentre használná, nem feltétlenül az alkotási szakaszra.",
+    "A mobilos verziót szívesen használná, ha az segítené a gyors értékfrissítéseket és statisztikakezelést."
+  ],
+  "pain_points": [
+    "A Ki szabályrendszer értelmezése számára időigényes és nehezen átlátható.",
+    "A papíralapú rendszerben a bónuszok és negatívumok frissítése lassú és hajlamos hibára.",
+    "Hiányzik egy digitális eszköz, ami egyszerűsíti a támadó/védekező értékek dinamikus módosítását.",
+    "A jelenlegi folyamat manuális ellenőrzést igényel minden karaktermódosítás után."
+  ],
+  "quotes": [
+    "\"Akkor élvezem igazán, ha már van koncepció, és utána járhatok a részleteknek.\"",
+    "\"A karakterpont elosztásban soha nem hibázok, mindent újraellenőrzök pihenők után.\"",
+    "\"A támadó értékekre és a védekező értékekre beállítható bónuszok és negatívumok könnyű kezelhetősége lenne a legfontosabb funkció.\"",
+    "\"Menedzselésre használnám inkább, nem karakteralkotásra.\""
+  ]
+}

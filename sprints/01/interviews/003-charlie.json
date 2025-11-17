@@ -1,0 +1,28 @@
+{
+  "id": "INT-003",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Charlie",
+    "segment": "Kezdő Anima játékos, aki elsősorban papíron alkot karaktert, de nyitott a digitális megoldásokra."
+  },
+  "consent": true,
+  "insights": [
+    "A karakteralkotást rendszerint papíron, közösen más játékosokkal végzi.",
+    "A legidőigényesebb rész számára a varázslatok kiválasztása és a mágia szabályainak értelmezése.",
+    "Értékelné, ha az alkalmazás automatikusan kiszámolná a másodlagos értékeket, mivel ezeket nehéz fejben követni.",
+    "Nyitott lenne a digitális megoldásokra, különösen mobilon, ha azok egyszerűsítik a karakteralkotási folyamatot."
+  ],
+  "pain_points": [
+    "A varázslatok és mágia szabályainak értelmezése sok időt vesz igénybe.",
+    "Korábban előfordult, hogy hibásan rakott össze karaktert, amit csak játék közben vettek észre.",
+    "A számítási hibákat általában más játékosok javítják, ami lassítja a folyamatot.",
+    "Hiányzik számára az a funkció, amely automatikusan elvégzi a másodlagos értékek számítását."
+  ],
+  "quotes": [
+    "\"A varázslatok kiválasztása mindig a legidőigényesebb rész.\"",
+    "\"Más vette észre, hogy rosszul számoltam, nem jöttek ki az értékek.\"",
+    "\"Az app számolja ki a másodlagos értékeimet – ez lenne a legfontosabb funkció.\"",
+    "\"Mobilon is használnám, ha egyszerűbbé teszi a karakteralkotást.\""
+  ]
+}

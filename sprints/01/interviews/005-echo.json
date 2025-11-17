@@ -1,0 +1,29 @@
+{
+  "id": "INT-005",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Echo",
+    "segment": "Közösségi szemléletű játékos, aki papírt és online segédeszközöket is használ karakteralkotáshoz."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó számára a karakteralkotás legélvezetesebb része, hogy szabadon meghatározhatja a karaktere egyedi tulajdonságait.",
+    "Online és papíralapú segédeszközöket egyaránt használ, a rugalmasságot tartja fontosnak.",
+    "Szükségét látja annak, hogy a digitális karakteralkotó lehetővé tegye a karakterek egyszerű megosztását más játékosokkal.",
+    "Értékeli az automatikus hibajelzést és a másodlagos értékek automatikus számítását.",
+    "Olyan alkalmazást tartana ideálisnak, amely kompatibilis a különböző virtuális asztali rendszerekkel (VTT-k)."
+  ],
+  "pain_points": [
+    "A jelenlegi eszközök nem biztosítanak egyszerű megosztási lehetőséget a karakterek között.",
+    "A hibajelzés és automatikus ellenőrzés hiánya hibás karakterlapokhoz vezethet.",
+    "A karakteralkotás során nehéz követni a szabályrendszer változó elemeit, különösen több eszköz között váltva.",
+    "Hiányzik a közösségi, online szinkronizációs funkció, amely segítené a közös játékot."
+  ],
+  "quotes": [
+    "\"A karakterem saját magam által meghatározható részeinek kiválasztása a legjobb rész az alkotásban.\"",
+    "\"Online segédeszközt és papírt is használok – attól függ, milyen gyorsan akarom elkészíteni.\"",
+    "\"Fontos, hogy meg tudjam osztani a karakteremet másokkal online.\"",
+    "\"A különböző VTT-kbe való könnyű importálás nagyon hasznos lenne.\""
+  ]
+}

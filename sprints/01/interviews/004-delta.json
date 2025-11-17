@@ -1,0 +1,29 @@
+{
+  "id": "INT-004",
+  "date": "2025-10-14",
+  "method": "online_survey",
+  "participant": {
+    "pseudonym": "Delta",
+    "segment": "Tapasztalt játékos, aki főként papíron készít karaktereket, és a történetmesélésre helyezi a hangsúlyt."
+  },
+  "consent": true,
+  "insights": [
+    "A válaszadó számára a karakteralkotás legfontosabb és legélvezetesebb része az előtörténet írása és a karakter koncepciójának megjelenítése a játékban.",
+    "A szabályok részletes értelmezése és a természetfeletti képességek (mágia, pszí, ki) feldolgozása időigényes számára.",
+    "A hibákat gyakran a KM segítségével javítja, ami azt jelzi, hogy szüksége lenne egy automatikus ellenőrző funkcióra a karakteralkotóban.",
+    "Fontosnak tartja, hogy az online eszköz tudjon nyomtatható karakterlapot exportálni, amelyen a változó értékek könnyen módosíthatók.",
+    "Olyan funkciókat tartana hasznosnak, amelyek lehetővé teszik a korábbi karakterek mentését és visszakeresését."
+  ],
+  "pain_points": [
+    "A részletes szabályértelmezés és a természetfeletti képességek kezelése időigényes és hibalehetőségekkel teli.",
+    "Gyakran hibázik a számításokban, különösen a karakteralkotás során.",
+    "A hibák javításához a KM segítségére van utalva, ami lassítja a folyamatot.",
+    "Hiányolja a karaktertörténetek és korábbi karakterek tárolásának lehetőségét."
+  ],
+  "quotes": [
+    "\"Előtörténet írást, vagy amikor a karakter koncepció játékban is megjelenik – ezt szeretem a legjobban.\"",
+    "\"Igen, sokszor megesett, főleg karakteralkotáskor. KM-nek oda szoktam adni ellenőrzésre.\"",
+    "\"A nyomtatható karakterlap fontos, a változó értékeket halványabban kéne nyomtatni, hogy könnyen fölül lehessen írni.\"",
+    "\"Tárolja a múltbéli karaktereket – ez a legfontosabb funkció lenne számomra.\""
+  ]
+}
