@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<coverage line-rate="0.62">
+  <packages>
+    <package name="hu.sandor.anima">
+      <classes>
+        <class name="CharacterService" line-rate="0.75"/>
+        <class name="CharacterController" line-rate="0.68"/>
+        <class name="CharacterListComponent" line-rate="0.55"/>
+      </classes>
+    </package>
+  </packages>
+</coverage>

@@ -1,7 +1,7 @@
-Feature: Üres állapot 
+Feature: Karakter létrehozás üres állapotból
 
-  Scenario: Első megnyitás
-    Given nincs rekord
-    When megnyitja a főoldalt
-    Then lát "Nincs még adatod" üzenetet
-     And lát "Új elem hozzáadása" gombot
+  Scenario: Üres állapot megjelenítése
+    Given a felhasználónak nincs karaktere
+    When megnyitja a karakterlista oldalt
+    Then megjelenik a "Nincs még karakter" üzenet
+    And látható a "Hozz létre egy új karaktert" gomb

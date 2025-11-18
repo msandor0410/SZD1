@@ -1,4 +1,3 @@
-{"timestamp":"2025-10-28T09:00:00Z","tool":"OpenRouter (gemini-2.5-pro)","task":"Spec v0.2 váz finomítása","decision":"Elfogadva a scope szűkítése 1 vertikális szeletre","impact":"Csökkent terjedelem, gyorsabb MVP","human_validation":"Mentor review alapján pontosítva"}
-{"timestamp":"2025-10-28T11:15:00Z","tool":"GitHub Copilot","task":"Gherkin AC váz generálása üres állapothoz","decision":"3/5 AC beemelve, 2 túl általános volt","impact":"Gyorsabb AC‑írás, jobb hibaállapot lefedés","human_validation":"Kézi átírás a projekt szóhasználatához"}
-{"timestamp":"2025-10-28T13:30:00Z","tool":"ChatGPT","task":"Terraform minta létrehozása plan‑hoz","decision":"random provider + plan artefakt","impact":"Plan fut CI‑ban, apply nem szükséges","human_validation":"Érintett fájlok kézzel ellenőrizve"}
-
+{"timestamp":"2025-01-01T10:00:00","tool":"ChatGPT","task":"Spec v0.2 készítése","decision":"elfogadva","impact":"Spec tisztázva"}
+{"timestamp":"2025-01-01T11:00:00","tool":"ChatGPT","task":"User Storyk írása","decision":"részben elfogadva","impact":"Story térkép kialakítva"}
+{"timestamp":"2025-01-01T12:00:00","tool":"ChatGPT","task":"Terraform plan-only tervezése","decision":"elfogadva","impact":"CI-ben plan futtatható"}

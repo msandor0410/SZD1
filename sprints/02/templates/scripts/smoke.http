@@ -1,6 +1,5 @@
-GET http://localhost:5173/
-Accept: text/html
+GET http://localhost:8080/api/characters
+Accept: application/json
 
 ###
-# Várt: 200
-
+# Várt válasz: 200 OK

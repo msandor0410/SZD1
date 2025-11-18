@@ -1,2 +1,1 @@
-# Add variables here when needed
-
+# Nincsenek változók a minimal plan-only konfigurációhoz

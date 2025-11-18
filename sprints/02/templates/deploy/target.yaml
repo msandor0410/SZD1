@@ -1,16 +1,18 @@
-type: static_hosting
+type: local_preview
+
 build:
-  command: "npm ci && npm run build"
-  artifacts: ["dist"]
+  command: "echo 'Angular build helyben történik (ng serve)'"
+  artifacts: []
+
 serve:
-  command: "npm run preview"
-  base_url: "http://localhost:5173"
+  command: "echo 'Spring Boot + Angular lokálisan fut'"
+  base_url: "http://localhost:8080"
+
 smoke:
-  path: "/"
+  path: "/api/characters"
   expect_status: 200
+
 iac:
   tool: "terraform"
   dir: "infra/terraform"
   plan_out: "infra/terraform/plan.out"
-notes: "Rövid indoklás a választásról"
-

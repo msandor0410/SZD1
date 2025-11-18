@@ -1,49 +1,55 @@
-# User Stories (Sprint 2) 
+# User Story-k (Sprint 2)
 
-> Minimum: 5 story (INVEST). Legalább 2 story AC-ját automatizáld.
+## US-01 – Üres karakterlista megjelenítése
+**Mint** felhasználó  
+**azt szeretném**, hogy lássam ha még nincs egyetlen karakterem sem  
+**azért**, hogy tudjam, mit kell tennem első lépésként.
 
-## INVEST ellenőrzőlista
-- Independent, Negotiable, Valuable, Estimable, Small, Testable
-
----
-
-### US‑01: Üres állapot megjelenítése
-**As a** new user
-**I want to** see an empty state when I have no data
-**So that** I understand the next step (CTA)
-
-Acceptance Criteria (Given–When–Then):
-- AC1: Empty state message and CTA are visible
-- AC2: Error state shows retry with guidance
-
-Automatizálás: `tests/acceptance/empty_state.feature`
+### AC-k:
+- AC1: Üres lista esetén „Nincs még karakter” jelenik meg.
+- AC2: Látható a CTA: „Hozz létre egy új karaktert”.
 
 ---
 
-### US‑02: Első elem létrehozása
-**As a** user
-**I want to** add a new item via a form
-**So that** I can start using the system
+## US-02 – Karakter létrehozó oldal megnyitása
+**Mint** felhasználó  
+**azt szeretném**, hogy megnyithassam az új karakter létrehozó oldalát  
+**azért**, hogy elkezdhessem a karakter kitöltését.
 
-AC példák:
-- AC1: Valid input → success toast + item listed
-- AC2: Missing required field → field error + no item created
-
----
-
-### US‑03: Lista megjelenítése
-**As a** user
-**I want to** browse my items in a list
-**So that** I can see my data at a glance
-
-AC példák:
-- AC1: Shows latest items first
-- AC2: Handles long titles with truncation
+### AC-k:
+- AC1: A CTA-ra kattintva /create-character oldalra navigál.
+- AC2: A karakter űrlap megjelenik.
 
 ---
 
-### US‑04: (helykitöltő)
+## US-03 – Érvényes karakter létrehozása
+**Mint** felhasználó  
+**azt szeretném**, hogy egy új karaktert hozhassak létre  
+**azért**, hogy elkezdhessem az Anima játékbeli szereplőm felépítését.
+
+### AC-k:
+- AC1: Kötelező mezők kitöltése után POST /api/characters hívás történik.
+- AC2: A backend 200 OK válasszal reagál.
+- AC3: A karakter megjelenik a listában.
 
 ---
 
-### US‑05: (helykitöltő)
+## US-04 – Hibakezelés érvénytelen bevitel esetén
+**Mint** felhasználó  
+**azt szeretném**, hogy a rendszer figyelmeztessen a hiányzó adatokra  
+**azért**, hogy helyesen tudjam kitölteni az űrlapot.
+
+### AC-k:
+- AC1: Üres „name” mező esetén piros hibaüzenet jelenik meg.
+- AC2: Nincs backend POST kérés.
+
+---
+
+## US-05 – Létrehozott karakter visszajelzése
+**Mint** felhasználó  
+**azt szeretném**, hogy sikeres mentés után visszakerüljek a listára  
+**azért**, hogy lássam a létrehozott karakteremet.
+
+### AC-k:
+- AC1: Sikeres mentés után lista oldalra navigál.
+- AC2: Az új karakter azonnal látható.

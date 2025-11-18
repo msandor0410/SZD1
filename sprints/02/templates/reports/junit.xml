@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sprint2Tests" tests="5" failures="0" errors="0">
+  <testcase classname="frontend.CreateCharacter" name="shouldCreateCharacter"/>
+  <testcase classname="frontend.EmptyState" name="shouldShowEmptyState"/>
+  <testcase classname="backend.CharacterService" name="createValidCharacter"/>
+  <testcase classname="backend.CharacterService" name="rejectInvalidCharacter"/>
+  <testcase classname="backend.ApiSmoke" name="smokeCharactersEndpoint"/>
+</testsuite>

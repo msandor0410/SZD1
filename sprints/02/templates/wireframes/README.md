@@ -1,26 +1,25 @@
-# Wireframes – fő flow
+# Wireframe dokumentáció – Sprint 2
 
-## 01-main-flow.png
-**Cél:** A felhasználó rálát a meglévő elemekre és új elemet indíthat.  
-**Interakciók:** keresés, lapozás, „Új elem” CTA.  
-**Állapotok:** normál (tartalom), loader átmenet.  
-**Hivatkozások:** US-03/AC1, Spec v0.2 – Fő AC-k/1, tests: `tests/acceptance/list_view.feature`.
+A wireframe-ek a fő felhasználói folyamatot mutatják be:  
+**Üres lista → Új karakter létrehozása → Sikeres mentés → Lista frissül**
 
-## 02-empty-state.png
-**Cél:** Az első belépő értse, mit tegyen.  
-**Interakciók:** „Új elem hozzáadása” CTA.  
-**Állapotok:** üres; információs üzenet.  
-**Hivatkozások:** US-01/AC1, tests: `tests/acceptance/empty_state.feature`.
+## 1. Üres állapot képernyő (US-01, AC-01)
+- Cél: a felhasználó megértse, hogy még nincs karaktere
+- Interakciók: „Hozz létre egy új karaktert” gomb
+- Állapotok: üres lista, információs szöveg
+- Megjegyzés: CTA a következő képernyőre visz
 
-## 03-error-state.png
-**Cél:** Hibából gyors visszaút.  
-**Interakciók:** „Próbáld újra” gomb, súgó link.  
-**Állapotok:** hiba; visszajelzés + retry.  
-**Hivatkozások:** US-01/AC2, tests: `tests/unit/error_handler.spec.ts`.
+## 2. Karakter létrehozó oldal (US-02, AC-02)
+- Cél: új karakter adatainak bevitele
+- Interakciók: űrlap mezők, „Mentés” gomb
+- Állapotok: normál, érvénytelen bevitel (piros hiba)
+- Megjegyzés: validáció frontend oldalon
 
-## 04-form-validation.png (opcionális)
-**Cél:** Adatbevitel minőség biztosítása.  
-**Interakciók:** valid/invalid beküldés, mezőszintű hibák.  
-**Állapotok:** invalid (piros label), success toast.  
-**Hivatkozások:** US-02/AC1–AC2, tests: `tests/acceptance/form_validation.feature`.
+## 3. Lista frissülése (US-05, AC-03)
+- Cél: látni a frissen mentett karaktert
+- Interakciók: karakterkártya, navigáció
+- Állapotok: normál listaállapot
+- Megjegyzés: adat backendről érkezik
 
+PNG-eket ebbe a könyvtárba kell feltölteni:
+`/sprints/02/wireframes/`

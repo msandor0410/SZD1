@@ -1,13 +1,21 @@
-# Terraform – Sprint 2 minta
+# Terraform – Sprint 2 (Plan-Only)
 
-Minimális, plan‑képes példa. Cél: `terraform validate` és `terraform plan` siker.
+Ez a könyvtár egy minimális Terraform konfigurációt tartalmaz, amely teljesíti a Sprint 2 követelményeit.
 
-Lépések (helyben):
+## Tartalom
+- `main.tf` – null_resource deklaráció
+- `providers.tf` – null provider
+- `variables.tf` – üres változófájl
+- Nincs `apply`, csak `validate` + `plan`
+
+## Futás
 ```
 terraform init
 terraform validate
 terraform plan -out=plan.out
 ```
 
-CI‑ban a `plan.out` artefaktot mentsd el (például `infra/terraform/plan.out`).
-
+## Miért így?
+- Gyors CI futás
+- Nincs szükség valós infrastruktúrára
+- A Sprint 2 követelményei szerint elegendő

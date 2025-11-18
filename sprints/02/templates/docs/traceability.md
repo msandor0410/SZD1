@@ -1,7 +1,11 @@
-# Traceability – Sprint 2 
+# Traceability Matrix (Sprint 2)
 
-| Story | AC  | Teszt(ek)                         | Kód (fő)                | CI lépés |
-|------:|:---:|-----------------------------------|-------------------------|----------|
-| US‑01 | AC1 | tests/acceptance/empty_state...   | src/ui/EmptyState.tsx   | smoke    |
-| US‑01 | AC2 | tests/unit/error_handler.spec.ts  | src/core/errors.ts      | unit     |
-| US‑02 | AC1 | tests/acceptance/form.feature     | src/ui/Form.tsx         | test     |
+| User Story | AC | Teszt | Kód | CI ellenőrzés |
+|------------|----|-------|------|----------------|
+| US-01 | AC-01 | empty_state.feature | Angular karakterlista komponens | Smoke + Unit teszt |
+| US-02 | AC-02 | create_character.feature | Angular /create-character route | Unit teszt |
+| US-03 | AC-03 | create_character.feature | POST /api/characters backend | Backend unit teszt |
+| US-04 | AC-04 | create_character.feature | Angular form validáció | Frontend teszt |
+| US-05 | AC-03 | create_character.feature | Lista frissítés logika | CI build + smoke |
+
+Minden AC legalább egy automatizált vagy manuális teszttel lefedett.
