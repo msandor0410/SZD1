@@ -1,24 +1,41 @@
-<div class="dashboard-wrapper">
-  <h2>Üdv újra, {{ username }}! 👋</h2>
+<div class="container">
 
-  <button class="logout-btn" (click)="logout()">Kijelentkezés</button>
+  <h1>Welcome, {{ username }}!</h1>
 
-  <button (click)="goCreate()" class="btn btn-primary">
-    + Új karakter
-  </button>
+  <button (click)="goCreate()">Create New Character</button>
+  <button (click)="logout()">Logout</button>
 
-  <h3>Karaktereid</h3>
+  <hr />
+
+  <h2>Your Characters</h2>
 
   <div *ngIf="characters.length === 0">
-    (Nincs még karakter…)
+    <p>No characters yet. Create one!</p>
   </div>
 
-  <div *ngFor="let c of characters" class="char-card">
-    <h3>{{ c.name }} (Lv {{ c.level }})</h3>
+  <table class="char-table" *ngIf="characters.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Race</th>
+        <th>Class</th>
+        <th>Level</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of characters">
+        <td>{{ c.name }}</td>
+        <td>{{ c.race }}</td>
+        <td>{{ c.className }}</td>
+        <td>{{ c.level }}</td>
 
-    <p>{{ c.className }} — {{ c.race }}</p>
+        <td>
+          <button (click)="view(c.characterId)">View</button>
+          <button (click)="delete(c.characterId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    <button (click)="view(c.characterId)">Megtekintés</button>
-    <button (click)="delete(c.characterId)">Törlés</button>
-  </div>
 </div>

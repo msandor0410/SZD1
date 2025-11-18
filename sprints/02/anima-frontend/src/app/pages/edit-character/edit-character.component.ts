@@ -15,7 +15,11 @@ export class EditCharacterComponent implements OnInit {
 
   model: any = {};
 
-  constructor(private route: ActivatedRoute, private service: CharacterService, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private service: CharacterService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));

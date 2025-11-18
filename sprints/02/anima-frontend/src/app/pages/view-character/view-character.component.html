@@ -1,21 +1,180 @@
-<h2>{{ character?.name }}</h2>
+<!-- LOADING STATE -->
+<div *ngIf="!character">
+  <h2>Loading character...</h2>
+</div>
 
-<p>Kaszt: {{ character?.className }}</p>
-<p>Faj: {{ character?.race }}</p>
-<p>Nem: {{ character?.gender }}</p>
+<!-- MAIN VIEW ONLY WHEN CHARACTER IS LOADED -->
+<div class="container" *ngIf="character">
 
-<h3>Fő statok</h3>
+  <h1>Character Details</h1>
 
-<ul>
-  <li>STR: {{ character?.strScore }}</li>
-  <li>AGI: {{ character?.agiScore }}</li>
-  <li>DEX: {{ character?.dexScore }}</li>
-  <li>CON: {{ character?.conScore }}</li>
-  <li>INT: {{ character?.intScore }}</li>
-  <li>PER: {{ character?.perScore }}</li>
-  <li>POW: {{ character?.powScore }}</li>
-  <li>WP: {{ character?.wpScore }}</li>
-</ul>
+  <button (click)="back()">Back to Dashboard</button>
+  <button (click)="edit(character.characterId)">Edit Character</button>
 
-<button (click)="edit(character.characterId)">Szerkesztés</button>
-<button (click)="back()">Vissza</button>
+  <hr />
+
+  <!-- ============================== -->
+  <!-- BASIC INFO -->
+  <!-- ============================== -->
+  <h2>Basic Information</h2>
+  <table class="info-table">
+    <tr><th>Name:</th><td>{{ character.name }}</td></tr>
+    <tr><th>Class:</th><td>{{ character.className }}</td></tr>
+    <tr><th>Race:</th><td>{{ character.race }}</td></tr>
+    <tr><th>Gender:</th><td>{{ character.gender }}</td></tr>
+    <tr><th>Level:</th><td>{{ character.level }}</td></tr>
+    <tr><th>Appearance:</th><td>{{ character.appearance }}</td></tr>
+    <tr><th>Size:</th><td>{{ character.size }}</td></tr>
+    <tr><th>Height (cm):</th><td>{{ character.heightCm }}</td></tr>
+    <tr><th>Weight (kg):</th><td>{{ character.weightKg }}</td></tr>
+    <tr><th>Background:</th><td>{{ character.background }}</td></tr>
+    <tr><th>Development Points:</th><td>{{ character.developmentPoints }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- PRIMARY -->
+  <!-- ============================== -->
+  <h2>Primary Stats</h2>
+  <table class="stat-table">
+    <tr><th>Strength</th><td>{{ character.strScore }}</td></tr>
+    <tr><th>Agility</th><td>{{ character.agiScore }}</td></tr>
+    <tr><th>Dexterity</th><td>{{ character.dexScore }}</td></tr>
+    <tr><th>Constitution</th><td>{{ character.conScore }}</td></tr>
+    <tr><th>Intelligence</th><td>{{ character.intScore }}</td></tr>
+    <tr><th>Perception</th><td>{{ character.perScore }}</td></tr>
+    <tr><th>Power</th><td>{{ character.powScore }}</td></tr>
+    <tr><th>Willpower</th><td>{{ character.wpScore }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- DERIVED -->
+  <!-- ============================== -->
+  <h2>Derived Stats</h2>
+  <table class="stat-table">
+    <tr><th>Life Points</th><td>{{ character.lifePoints }}</td></tr>
+    <tr><th>Life Point Multiple</th><td>{{ character.lifePointMultiple }}</td></tr>
+    <tr><th>Initiative</th><td>{{ character.initiative }}</td></tr>
+    <tr><th>Fatigue</th><td>{{ character.fatigue }}</td></tr>
+    <tr><th>Attack Base</th><td>{{ character.attackBase }}</td></tr>
+    <tr><th>Defense Base</th><td>{{ character.defenseBase }}</td></tr>
+    <tr><th>Movement</th><td>{{ character.movement }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- ATHLETICS -->
+  <!-- ============================== -->
+  <h2>Athletics</h2>
+  <table class="skill-table">
+    <tr><th>Athletics</th><td>{{ character.athletics }}</td></tr>
+    <tr><th>Acrobatics</th><td>{{ character.acrobatics }}</td></tr>
+    <tr><th>Athleticism</th><td>{{ character.athleticism }}</td></tr>
+    <tr><th>Climb</th><td>{{ character.climb }}</td></tr>
+    <tr><th>Jump</th><td>{{ character.jump }}</td></tr>
+    <tr><th>Ride</th><td>{{ character.ride }}</td></tr>
+    <tr><th>Swim</th><td>{{ character.swim }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- VIGOR -->
+  <!-- ============================== -->
+  <h2>Vigor</h2>
+  <table class="skill-table">
+    <tr><th>Vigor</th><td>{{ character.vigor }}</td></tr>
+    <tr><th>Composure</th><td>{{ character.composure }}</td></tr>
+    <tr><th>Feats of Strength</th><td>{{ character.featsOfStrength }}</td></tr>
+    <tr><th>Withstand Pain</th><td>{{ character.withstandPain }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- PERCEPTION -->
+  <!-- ============================== -->
+  <h2>Perception</h2>
+  <table class="skill-table">
+    <tr><th>Perception</th><td>{{ character.perception }}</td></tr>
+    <tr><th>Notice</th><td>{{ character.notice }}</td></tr>
+    <tr><th>Search</th><td>{{ character.searchSkill }}</td></tr>
+    <tr><th>Track</th><td>{{ character.track }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- INTELLECTUAL -->
+  <!-- ============================== -->
+  <h2>Intellectual</h2>
+  <table class="skill-table">
+    <tr><th>Intellectual</th><td>{{ character.intellectual }}</td></tr>
+    <tr><th>Animals</th><td>{{ character.animals }}</td></tr>
+    <tr><th>Appraisal</th><td>{{ character.appraisal }}</td></tr>
+    <tr><th>Memorize</th><td>{{ character.memorize }}</td></tr>
+    <tr><th>Herbal Lore</th><td>{{ character.herbalLore }}</td></tr>
+    <tr><th>History</th><td>{{ character.historySkill }}</td></tr>
+    <tr><th>Magic Appraisal</th><td>{{ character.magicAppraisal }}</td></tr>
+    <tr><th>Medicine</th><td>{{ character.medicine }}</td></tr>
+    <tr><th>Navigation</th><td>{{ character.navigation }}</td></tr>
+    <tr><th>Occult</th><td>{{ character.occult }}</td></tr>
+    <tr><th>Sciences</th><td>{{ character.sciences }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- SOCIAL -->
+  <!-- ============================== -->
+  <h2>Social</h2>
+  <table class="skill-table">
+    <tr><th>Social</th><td>{{ character.social }}</td></tr>
+    <tr><th>Intimidate</th><td>{{ character.intimidate }}</td></tr>
+    <tr><th>Leadership</th><td>{{ character.leadership }}</td></tr>
+    <tr><th>Persuasion</th><td>{{ character.persuasion }}</td></tr>
+    <tr><th>Style</th><td>{{ character.style }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- SUBTERFUGE -->
+  <!-- ============================== -->
+  <h2>Subterfuge</h2>
+  <table class="skill-table">
+    <tr><th>Subterfuge</th><td>{{ character.subterfuge }}</td></tr>
+    <tr><th>Disguise</th><td>{{ character.disguise }}</td></tr>
+    <tr><th>Hide</th><td>{{ character.hideSkill }}</td></tr>
+    <tr><th>Lock Picking</th><td>{{ character.lockPicking }}</td></tr>
+    <tr><th>Poisons</th><td>{{ character.poisons }}</td></tr>
+    <tr><th>Theft</th><td>{{ character.theft }}</td></tr>
+    <tr><th>Stealth</th><td>{{ character.stealth }}</td></tr>
+    <tr><th>Trap Lore</th><td>{{ character.trapLore }}</td></tr>
+  </table>
+
+  <hr />
+
+  <!-- ============================== -->
+  <!-- CREATIVE -->
+  <!-- ============================== -->
+  <h2>Creative</h2>
+  <table class="skill-table">
+    <tr><th>Creative</th><td>{{ character.creative }}</td></tr>
+    <tr><th>Art</th><td>{{ character.art }}</td></tr>
+    <tr><th>Dance</th><td>{{ character.dance }}</td></tr>
+    <tr><th>Forging</th><td>{{ character.forging }}</td></tr>
+    <tr><th>Music</th><td>{{ character.music }}</td></tr>
+    <tr><th>Sleight of Hand</th><td>{{ character.sleightOfHand }}</td></tr>
+  </table>
+
+  <hr />
+
+  <button (click)="edit(character.characterId)">Edit Character</button>
+  <button (click)="back()">Back</button>
+
+</div>

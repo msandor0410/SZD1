@@ -1,47 +1,307 @@
-<h2>Új karakter létrehozása</h2>
+<div class="container">
 
-<div class="form">
+  <h1>Create Character</h1>
 
-  <label>Név</label>
-  <input [(ngModel)]="model.name" required>
+  <form (ngSubmit)="save()" #form="ngForm">
 
-  <label>Kaszt</label>
-  <input [(ngModel)]="model.className" required>
+    <!-- ============================== -->
+    <!-- BASIC INFO -->
+    <!-- ============================== -->
+    <h2>Basic Information</h2>
 
-  <label>Faj</label>
-  <input [(ngModel)]="model.race" required>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="model.name" name="name" required />
 
-  <label>Nem</label>
-  <input [(ngModel)]="model.gender" required>
+    <label>Class:</label>
+    <input type="text" [(ngModel)]="model.className" name="className" />
 
-  <hr>
+    <label>Race:</label>
+    <select [(ngModel)]="model.race" name="race" required>
+      <option value="">-- Select Race --</option>
+      <option *ngFor="let r of races" [value]="r">{{ r }}</option>
+    </select>
 
-  <h3>Fő statok</h3>
+    <label>Gender:</label>
+    <input type="text" [(ngModel)]="model.gender" name="gender" />
 
-  <label>Erő (STR)</label>
-  <input type="number" [(ngModel)]="model.strScore" required>
+    <label>Level:</label>
+    <input type="number" [(ngModel)]="model.level" name="level" />
 
-  <label>Ügyesség (AGI)</label>
-  <input type="number" [(ngModel)]="model.agiScore" required>
+    <label>Appearance:</label>
+    <input type="number" [(ngModel)]="model.appearance" name="appearance" />
 
-  <label>Gyorsaság (DEX)</label>
-  <input type="number" [(ngModel)]="model.dexScore" required>
+    <label>Size:</label>
+    <input type="number" [(ngModel)]="model.size" name="size" />
 
-  <label>Állóképesség (CON)</label>
-  <input type="number" [(ngModel)]="model.conScore" required>
+    <label>Height (cm):</label>
+    <input type="number" [(ngModel)]="model.heightCm" name="heightCm" />
 
-  <label>Intelligencia (INT)</label>
-  <input type="number" [(ngModel)]="model.intScore" required>
+    <label>Weight (kg):</label>
+    <input type="number" [(ngModel)]="model.weightKg" name="weightKg" />
 
-  <label>Észlelés (PER)</label>
-  <input type="number" [(ngModel)]="model.perScore" required>
+    <label>Background:</label>
+    <textarea [(ngModel)]="model.background" name="background"></textarea>
 
-  <label>Akaraterő (POW)</label>
-  <input type="number" [(ngModel)]="model.powScore" required>
+    <label>Development Points:</label>
+    <input type="number" [(ngModel)]="model.developmentPoints" name="developmentPoints" />
 
-  <label>Fegyelem (WP)</label>
-  <input type="number" [(ngModel)]="model.wpScore" required>
+    <hr />
 
-  <button (click)="save()">Mentés</button>
-  <button (click)="cancel()">Mégse</button>
+
+    <!-- ============================== -->
+    <!-- PRIMARY STATS -->
+    <!-- ============================== -->
+    <h2>Primary Stats</h2>
+
+    <label>Strength:</label>
+    <input type="number" [(ngModel)]="model.strScore" name="strScore" />
+
+    <label>Agility:</label>
+    <input type="number" [(ngModel)]="model.agiScore" name="agiScore" />
+
+    <label>Dexterity:</label>
+    <input type="number" [(ngModel)]="model.dexScore" name="dexScore" />
+
+    <label>Constitution:</label>
+    <input type="number" [(ngModel)]="model.conScore" name="conScore" />
+
+    <label>Intelligence:</label>
+    <input type="number" [(ngModel)]="model.intScore" name="intScore" />
+
+    <label>Perception:</label>
+    <input type="number" [(ngModel)]="model.perScore" name="perScore" />
+
+    <label>Power:</label>
+    <input type="number" [(ngModel)]="model.powScore" name="powScore" />
+
+    <label>Willpower:</label>
+    <input type="number" [(ngModel)]="model.wpScore" name="wpScore" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- DERIVED STATS -->
+    <!-- ============================== -->
+    <h2>Derived Stats</h2>
+
+    <label>Life Points:</label>
+    <input type="number" [(ngModel)]="model.lifePoints" name="lifePoints" readonly />
+
+    <label>Life Point Multiple:</label>
+    <input type="number" [(ngModel)]="model.lifePointMultiple" name="lifePointMultiple" />
+
+    <label>Initiative:</label>
+    <input type="number" [(ngModel)]="model.initiative" name="initiative" readonly />
+
+    <label>Fatigue:</label>
+    <input type="number" [(ngModel)]="model.fatigue" name="fatigue" readonly />
+
+    <label>Attack Base:</label>
+    <input type="number" [(ngModel)]="model.attackBase" name="attackBase" readonly />
+
+    <label>Defense Base:</label>
+    <input type="number" [(ngModel)]="model.defenseBase" name="defenseBase" readonly />
+
+    <label>Movement:</label>
+    <input type="number" [(ngModel)]="model.movement" name="movement" readonly />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – ATHLETICS -->
+    <!-- ============================== -->
+    <h2>Athletics</h2>
+
+    <label>Athletics:</label>
+    <input type="number" [(ngModel)]="model.athletics" name="athletics" />
+
+    <label>Acrobatics:</label>
+    <input type="number" [(ngModel)]="model.acrobatics" name="acrobatics" />
+
+    <label>Athleticism:</label>
+    <input type="number" [(ngModel)]="model.athleticism" name="athleticism" />
+
+    <label>Climb:</label>
+    <input type="number" [(ngModel)]="model.climb" name="climb" />
+
+    <label>Jump:</label>
+    <input type="number" [(ngModel)]="model.jump" name="jump" />
+
+    <label>Ride:</label>
+    <input type="number" [(ngModel)]="model.ride" name="ride" />
+
+    <label>Swim:</label>
+    <input type="number" [(ngModel)]="model.swim" name="swim" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – VIGOR -->
+    <!-- ============================== -->
+    <h2>Vigor</h2>
+
+    <label>Vigor:</label>
+    <input type="number" [(ngModel)]="model.vigor" name="vigor" />
+
+    <label>Composure:</label>
+    <input type="number" [(ngModel)]="model.composure" name="composure" />
+
+    <label>Feats of Strength:</label>
+    <input type="number" [(ngModel)]="model.featsOfStrength" name="featsOfStrength" />
+
+    <label>Withstand Pain:</label>
+    <input type="number" [(ngModel)]="model.withstandPain" name="withstandPain" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – PERCEPTION -->
+    <!-- ============================== -->
+    <h2>Perception</h2>
+
+    <label>Perception:</label>
+    <input type="number" [(ngModel)]="model.perception" name="perception" />
+
+    <label>Notice:</label>
+    <input type="number" [(ngModel)]="model.notice" name="notice" />
+
+    <label>Search:</label>
+    <input type="number" [(ngModel)]="model.searchSkill" name="searchSkill" />
+
+    <label>Track:</label>
+    <input type="number" [(ngModel)]="model.track" name="track" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – INTELLECTUAL -->
+    <!-- ============================== -->
+    <h2>Intellectual</h2>
+
+    <label>Intellectual:</label>
+    <input type="number" [(ngModel)]="model.intellectual" name="intellectual" />
+
+    <label>Animals:</label>
+    <input type="number" [(ngModel)]="model.animals" name="animals" />
+
+    <label>Appraisal:</label>
+    <input type="number" [(ngModel)]="model.appraisal" name="appraisal" />
+
+    <label>Memorize:</label>
+    <input type="number" [(ngModel)]="model.memorize" name="memorize" />
+
+    <label>Herbal Lore:</label>
+    <input type="number" [(ngModel)]="model.herbalLore" name="herbalLore" />
+
+    <label>History:</label>
+    <input type="number" [(ngModel)]="model.historySkill" name="historySkill" />
+
+    <label>Magic Appraisal:</label>
+    <input type="number" [(ngModel)]="model.magicAppraisal" name="magicAppraisal" />
+
+    <label>Medicine:</label>
+    <input type="number" [(ngModel)]="model.medicine" name="medicine" />
+
+    <label>Navigation:</label>
+    <input type="number" [(ngModel)]="model.navigation" name="navigation" />
+
+    <label>Occult:</label>
+    <input type="number" [(ngModel)]="model.occult" name="occult" />
+
+    <label>Sciences:</label>
+    <input type="number" [(ngModel)]="model.sciences" name="sciences" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – SOCIAL -->
+    <!-- ============================== -->
+    <h2>Social</h2>
+
+    <label>Social:</label>
+    <input type="number" [(ngModel)]="model.social" name="social" />
+
+    <label>Intimidate:</label>
+    <input type="number" [(ngModel)]="model.intimidate" name="intimidate" />
+
+    <label>Leadership:</label>
+    <input type="number" [(ngModel)]="model.leadership" name="leadership" />
+
+    <label>Persuasion:</label>
+    <input type="number" [(ngModel)]="model.persuasion" name="persuasion" />
+
+    <label>Style:</label>
+    <input type="number" [(ngModel)]="model.style" name="style" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – SUBTERFUGE -->
+    <!-- ============================== -->
+    <h2>Subterfuge</h2>
+
+    <label>Subterfuge:</label>
+    <input type="number" [(ngModel)]="model.subterfuge" name="subterfuge" />
+
+    <label>Disguise:</label>
+    <input type="number" [(ngModel)]="model.disguise" name="disguise" />
+
+    <label>Hide:</label>
+    <input type="number" [(ngModel)]="model.hideSkill" name="hideSkill" />
+
+    <label>Lock Picking:</label>
+    <input type="number" [(ngModel)]="model.lockPicking" name="lockPicking" />
+
+    <label>Poisons:</label>
+    <input type="number" [(ngModel)]="model.poisons" name="poisons" />
+
+    <label>Theft:</label>
+    <input type="number" [(ngModel)]="model.theft" name="theft" />
+
+    <label>Stealth:</label>
+    <input type="number" [(ngModel)]="model.stealth" name="stealth" />
+
+    <label>Trap Lore:</label>
+    <input type="number" [(ngModel)]="model.trapLore" name="trapLore" />
+
+    <hr />
+
+
+    <!-- ============================== -->
+    <!-- SECONDARY – CREATIVE -->
+    <!-- ============================== -->
+    <h2>Creative</h2>
+
+    <label>Creative:</label>
+    <input type="number" [(ngModel)]="model.creative" name="creative" />
+
+    <label>Art:</label>
+    <input type="number" [(ngModel)]="model.art" name="art" />
+
+    <label>Dance:</label>
+    <input type="number" [(ngModel)]="model.dance" name="dance" />
+
+    <label>Forging:</label>
+    <input type="number" [(ngModel)]="model.forging" name="forging" />
+
+    <label>Music:</label>
+    <input type="number" [(ngModel)]="model.music" name="music" />
+
+    <label>Sleight of Hand:</label>
+    <input type="number" [(ngModel)]="model.sleightOfHand" name="sleightOfHand" />
+
+    <hr />
+
+    <button type="submit">Save Character</button>
+    <button type="button" (click)="cancel()">Cancel</button>
+
+  </form>
+
 </div>
