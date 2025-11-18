@@ -3,6 +3,7 @@ package hu.sandor.anima.animabackend.auth;
 import hu.sandor.anima.animabackend.auth.dto.AuthResponse;
 import hu.sandor.anima.animabackend.auth.dto.LoginRequest;
 import hu.sandor.anima.animabackend.auth.dto.RegisterRequest;
+import hu.sandor.anima.animabackend.config.JwtService;
 import hu.sandor.anima.animabackend.user.User;
 import hu.sandor.anima.animabackend.user.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,10 +15,12 @@ public class AuthService {
 
     private final UserRepository repo;
     private final PasswordEncoder encoder;
+    private final JwtService jwt;
 
-    public AuthService(UserRepository repo, PasswordEncoder encoder) {
+    public AuthService(UserRepository repo, PasswordEncoder encoder, JwtService jwt) {
         this.repo = repo;
         this.encoder = encoder;
+        this.jwt = jwt;
     }
 
     @Transactional
@@ -34,7 +37,11 @@ public class AuthService {
         user.setPasswordHash(encoder.encode(request.getPassword()));
 
         User saved = repo.save(user);
-        return new AuthResponse(saved.getId(), saved.getUsername());
+        return new AuthResponse(
+                null,            // token nincs
+                saved.getId(),
+                saved.getUsername()
+        );
     }
 
     @Transactional(readOnly = true)
@@ -45,7 +52,10 @@ public class AuthService {
         if (!encoder.matches(request.getPassword(), user.getPasswordHash()))
             throw new IllegalArgumentException("Invalid credentials");
 
-        return new AuthResponse(user.getId(), user.getUsername());
+        String token = jwt.generateToken(user.getUsername(), user.getId());
+
+        return new AuthResponse(token, user.getId(), user.getUsername());
     }
+
 }
 

@@ -1,0 +1,21 @@
+<h2>{{ character?.name }}</h2>
+
+<p>Kaszt: {{ character?.className }}</p>
+<p>Faj: {{ character?.race }}</p>
+<p>Nem: {{ character?.gender }}</p>
+
+<h3>Fő statok</h3>
+
+<ul>
+  <li>STR: {{ character?.strScore }}</li>
+  <li>AGI: {{ character?.agiScore }}</li>
+  <li>DEX: {{ character?.dexScore }}</li>
+  <li>CON: {{ character?.conScore }}</li>
+  <li>INT: {{ character?.intScore }}</li>
+  <li>PER: {{ character?.perScore }}</li>
+  <li>POW: {{ character?.powScore }}</li>
+  <li>WP: {{ character?.wpScore }}</li>
+</ul>
+
+<button (click)="edit(character.characterId)">Szerkesztés</button>
+<button (click)="back()">Vissza</button>

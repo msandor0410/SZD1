@@ -13,15 +13,18 @@ export class AuthService {
   private API_URL = 'http://localhost:8080/api/auth';
 
   login(username: string, password: string) {
-    return this.http.post<{ token: string }>(`${this.API_URL}/login`, {
-      username,
-      password,
-    }).pipe(
-      tap(res => {
-        localStorage.setItem('auth_token', res.token);
-        this.router.navigate(['/dashboard']);
-      })
-    );
+    return this.http
+      .post<{ token: string; userId: number; username: string }>(
+        `${this.API_URL}/login`,
+        { username, password }
+      )
+      .pipe(
+        tap((res) => {
+          localStorage.setItem('auth_token', res.token);
+          localStorage.setItem('user_id', res.userId.toString());
+          localStorage.setItem('username', res.username);
+        })
+      );
   }
 
   register(username: string, email: string, password: string) {
@@ -34,6 +37,8 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('auth_token');
+    localStorage.removeItem('user_id');
+    localStorage.removeItem('username');
     this.router.navigate(['/login']);
   }
 

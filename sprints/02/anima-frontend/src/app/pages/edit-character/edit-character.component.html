@@ -1,0 +1,44 @@
+<h2>{{ model?.name }} szerkesztése</h2>
+
+<label>Név</label>
+<input [(ngModel)]="model.name">
+
+<label>Kaszt</label>
+<input [(ngModel)]="model.className">
+
+<label>Faj</label>
+<input [(ngModel)]="model.race">
+
+<label>Nem</label>
+<input [(ngModel)]="model.gender">
+
+<hr>
+
+<h3>Fő statok</h3>
+
+<label>STR</label>
+<input type="number" [(ngModel)]="model.strScore">
+
+<label>AGI</label>
+<input type="number" [(ngModel)]="model.agiScore">
+
+<label>DEX</label>
+<input type="number" [(ngModel)]="model.dexScore">
+
+<label>CON</label>
+<input type="number" [(ngModel)]="model.conScore">
+
+<label>INT</label>
+<input type="number" [(ngModel)]="model.intScore">
+
+<label>PER</label>
+<input type="number" [(ngModel)]="model.perScore">
+
+<label>POW</label>
+<input type="number" [(ngModel)]="model.powScore">
+
+<label>WP</label>
+<input type="number" [(ngModel)]="model.wpScore">
+
+<button (click)="save()">Mentés</button>
+<button (click)="cancel()">Mégse</button>

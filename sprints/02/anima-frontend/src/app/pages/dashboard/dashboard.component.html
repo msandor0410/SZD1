@@ -1,1 +1,24 @@
-<p>dashboard works!</p>
+<div class="dashboard-wrapper">
+  <h2>Üdv újra, {{ username }}! 👋</h2>
+
+  <button class="logout-btn" (click)="logout()">Kijelentkezés</button>
+
+  <button (click)="goCreate()" class="btn btn-primary">
+    + Új karakter
+  </button>
+
+  <h3>Karaktereid</h3>
+
+  <div *ngIf="characters.length === 0">
+    (Nincs még karakter…)
+  </div>
+
+  <div *ngFor="let c of characters" class="char-card">
+    <h3>{{ c.name }} (Lv {{ c.level }})</h3>
+
+    <p>{{ c.className }} — {{ c.race }}</p>
+
+    <button (click)="view(c.characterId)">Megtekintés</button>
+    <button (click)="delete(c.characterId)">Törlés</button>
+  </div>
+</div>

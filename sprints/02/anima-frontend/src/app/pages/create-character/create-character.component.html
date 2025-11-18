@@ -1,0 +1,47 @@
+<h2>Új karakter létrehozása</h2>
+
+<div class="form">
+
+  <label>Név</label>
+  <input [(ngModel)]="model.name" required>
+
+  <label>Kaszt</label>
+  <input [(ngModel)]="model.className" required>
+
+  <label>Faj</label>
+  <input [(ngModel)]="model.race" required>
+
+  <label>Nem</label>
+  <input [(ngModel)]="model.gender" required>
+
+  <hr>
+
+  <h3>Fő statok</h3>
+
+  <label>Erő (STR)</label>
+  <input type="number" [(ngModel)]="model.strScore" required>
+
+  <label>Ügyesség (AGI)</label>
+  <input type="number" [(ngModel)]="model.agiScore" required>
+
+  <label>Gyorsaság (DEX)</label>
+  <input type="number" [(ngModel)]="model.dexScore" required>
+
+  <label>Állóképesség (CON)</label>
+  <input type="number" [(ngModel)]="model.conScore" required>
+
+  <label>Intelligencia (INT)</label>
+  <input type="number" [(ngModel)]="model.intScore" required>
+
+  <label>Észlelés (PER)</label>
+  <input type="number" [(ngModel)]="model.perScore" required>
+
+  <label>Akaraterő (POW)</label>
+  <input type="number" [(ngModel)]="model.powScore" required>
+
+  <label>Fegyelem (WP)</label>
+  <input type="number" [(ngModel)]="model.wpScore" required>
+
+  <button (click)="save()">Mentés</button>
+  <button (click)="cancel()">Mégse</button>
+</div>

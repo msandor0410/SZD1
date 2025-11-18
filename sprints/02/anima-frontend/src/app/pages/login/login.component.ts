@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -17,11 +17,14 @@ export class LoginComponent {
   errorMessage = '';
 
   private auth = inject(AuthService);
+  private router = inject(Router);
 
   onLogin() {
     this.auth.login(this.username, this.password).subscribe({
-      next: () => {},
-      error: () => this.errorMessage = 'Hibás felhasználónév vagy jelszó!'
+      next: () => {
+        this.router.navigate(['/dashboard']);
+      },
+      error: () => (this.errorMessage = 'Hibás bejelentkezés!'),
     });
   }
 }
